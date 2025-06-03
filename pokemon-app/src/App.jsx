@@ -1,6 +1,7 @@
 import { useState } from 'react'
 import { BrowserRouter, Route, Routes, Link } from 'react-router-dom'
 import { RouteNotFound } from './components/RouteNotFound'
+import { PokemonList } from './components/PokemonList'
 import './App.css'
 
 function App() {
@@ -9,9 +10,11 @@ function App() {
     <>
       <BrowserRouter>
         <>
+          <Link to='/pokemon'>PokemonList</Link>
         </>
         <Routes>
-          <Route path='*' element={RouteNotFound} />
+          <Route path='/pokemon' element={<PokemonList />} />
+          <Route path='*' element={<RouteNotFound />} />
         </Routes>
       </BrowserRouter>
 
