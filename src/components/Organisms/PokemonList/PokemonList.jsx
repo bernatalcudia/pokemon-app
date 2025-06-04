@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react'
 import PokemonItem from '../../Molecules/PokemonItem/PokemonItem'
+import { CharacterItem } from '../../Molecules/CharacterItem/CharacterItem'
 
 import './PokemonList.scss'
 
@@ -18,7 +19,7 @@ export const PokemonList = () => {
         <div className='pokemonsContainer'>
             {pokemons.map((pokemon, index) => {
                 return (
-                    <PokemonItem name={pokemon.name} key={index} />
+                    <CharacterItem name={pokemon.name} img={`https://img.pokemondb.net/sprites/home/normal/${pokemon.name}.png`} key={index} />
                 )
             })}
         </div>

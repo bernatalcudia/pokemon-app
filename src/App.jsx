@@ -1,6 +1,8 @@
 import { BrowserRouter, Route, Routes, Link } from 'react-router-dom'
 import { RouteNotFound } from './components/RouteNotFound'
 import { PokemonList } from './components/Organisms/PokemonList/PokemonList'
+import { DragonBallList } from './components/Organisms/DragonBallList/DragonBallList'
+import { MainLayout } from './Templates/MainLayout/MainLayout'
 import './App.css'
 
 function App() {
@@ -8,11 +10,8 @@ function App() {
   return (
     <>
       <BrowserRouter>
-        <>
-          <Link to='/pokemon'>PokemonList</Link>
-        </>
         <Routes>
-          <Route path='/pokemon' element={<PokemonList />} />
+          <Route path='/' element={<MainLayout leftContent={<DragonBallList />} rightContent={<PokemonList />} />} />
           <Route path='*' element={<RouteNotFound />} />
         </Routes>
       </BrowserRouter>
