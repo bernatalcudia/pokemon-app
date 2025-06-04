@@ -1,5 +1,7 @@
 import React, { useState, useEffect } from 'react'
-import PokemonItem from '../Molecules/PokemonItem'
+import PokemonItem from '../../Molecules/PokemonItem/PokemonItem'
+
+import './PokemonList.scss'
 
 export const PokemonList = () => {
 
@@ -13,7 +15,7 @@ export const PokemonList = () => {
             })
     }, [])
     return (
-        <div>
+        <div className='pokemonsContainer'>
             <h2>Pokedex</h2>
             {pokemons.map((pokemon, index) => {
                 return (

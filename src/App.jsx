@@ -1,7 +1,7 @@
 import { useState } from 'react'
 import { BrowserRouter, Route, Routes, Link } from 'react-router-dom'
 import { RouteNotFound } from './components/RouteNotFound'
-import { PokemonList } from './components/Organisms/PokemonList'
+import { PokemonList } from './components/Organisms/PokemonList/PokemonList'
 import './App.css'
 
 function App() {
