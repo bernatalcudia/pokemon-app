@@ -4,7 +4,6 @@ import PokemonItem from '../Molecules/PokemonItem'
 export const PokemonList = () => {
 
     const [pokemons, setPokemons] = useState([])
-    const [searchQuery, setSearchQuery] = useState('pikachu')
 
     useEffect(() => {
         fetch(`https://pokeapi.co/api/v2/pokemon/`)
