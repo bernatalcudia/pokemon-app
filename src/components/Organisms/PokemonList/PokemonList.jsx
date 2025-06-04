@@ -16,7 +16,6 @@ export const PokemonList = () => {
     }, [])
     return (
         <div className='pokemonsContainer'>
-            <h2>Pokedex</h2>
             {pokemons.map((pokemon, index) => {
                 return (
                     <PokemonItem name={pokemon.name} key={index} />
