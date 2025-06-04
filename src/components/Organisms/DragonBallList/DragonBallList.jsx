@@ -8,21 +8,22 @@ const DragonBallList = () => {
     useEffect(() => {
 
         fetch('https://dragonball-api.com/api/characters')
-            .then((res) => res.data)
+            .then((res) => res.json())
             .then((characterList) => {
+                console.log(characterList)
                 setCharacters(characterList.items);
             });
     }, []);
 
     return (
-        <div>
+        <>
             <h2>Dragon Ball</h2>
             <div className='charactersContainer'>
                 {characters.map((character) => {
                     return <CharacterItem name={character.name} img={character.image} key={character.id} />;
                 })}
             </div>
-        </div>
+        </>
     );
 };
 
