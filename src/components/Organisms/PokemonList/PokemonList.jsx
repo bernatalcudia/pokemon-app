@@ -3,7 +3,7 @@ import { CharacterItem } from '../../Molecules/CharacterItem/CharacterItem'
 
 import './PokemonList.scss'
 
-export const PokemonList = () => {
+const PokemonList = () => {
 
     const [pokemons, setPokemons] = useState([])
 
@@ -28,4 +28,4 @@ export const PokemonList = () => {
     )
 }
 
-export default PokemonList
+export { PokemonList }

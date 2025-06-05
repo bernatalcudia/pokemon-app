@@ -12,4 +12,4 @@ const MainLayout = ({ leftContent, rightContent }) => {
         </div>);
 };
 
-export { MainLayout };
+export { MainLayout }
